@@ -19,5 +19,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Stack and technical details
-    Start next js app
-    Install chadcn: npx shadcn@latest init using --legacy-peer-deps
+- Start next js app
+- Install chadcn: ```bash npx shadcn@latest``` init using --legacy-peer-deps and added the most common components
+- connected clerk: ```bash npm install @clerk/nextjs ```
+    - Set Clerk API keys
+    - Add middleware.ts to a root
+    - Add ClerkProvider
+- ... ans set up:
+    - Customised session token w custom claims ```bash {"metadata": "{{user.public_metadata}}" ```
+    - create users and roles
+        -  "admin"
+
