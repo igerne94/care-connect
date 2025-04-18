@@ -53,7 +53,7 @@ export default async function Home() {
                   Connect with healthcare professionals, manage appointments, and access your medical records - all in one secure platform.
                 </p>
             </div>
-              <div className="flex gap-4">
+            <div className="flex gap-4 items-center justify-center mt-8">
               {userId ?
                 <>
                   <Link href={"/dashboard"}>
@@ -63,12 +63,12 @@ export default async function Home() {
                   </Link>
                 <UserButton />
                 </> :
-                  <>
-                    <Link href={"/sign-up"}><Button className="md:text-base font-light">Create a new account</Button></Link>
-                    <Link href={"/sign-in"}><Button variant="outline" className="md:text-base underline hover:text-blue-600">Log in to account</Button></Link>
-                  </>
-                }
-              </div>
+                <>
+                  <Link href={"/sign-up"}><Button className="md:text-base font-light">Create a new account</Button></Link>
+                  <Link href={"/sign-in"}><Button variant="outline" className="md:text-base underline hover:text-blue-600">Log in to account</Button></Link>
+                </>
+              }
+            </div>
           </div>
         </div>
         <Features />
