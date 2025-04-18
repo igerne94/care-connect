@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="w-full h-screen flex items-center justify-center">
+        <div className="flex w-full h-screen items-center justify-center overflow-hidden">
             {/* right side */}
             <div className="w-1/2 h-full flex items-center justify-center">
                 {children}
@@ -15,10 +15,10 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
                     src="https://media.istockphoto.com/id/496710286/photo/young-nurse-portrait-in-hospital.jpg?s=2048x2048&w=is&k=20&c=20Acnbr5nFFG6goQO8G9-tVYFMegfpX4m4YdLtmmkt0="
                     alt="Background Image"
                     fill
-                    className="w-full h-full object-cover"
+                    className="object-cover"
                     priority
                 />
-                <div className="absolute top-0 w-full h-full flex flex-col items-center justify-center"> {/* TODO: add bg-black bg-opacity-40 z-10 */}
+                <div className="absolute top-0 w-full h-full bg-black/50 z-10 flex flex-col items-center justify-center">
                     <h1 className="text-3xl 2xl:text-5xl font-bold text-white">Health Connect</h1>
                     <p className="text-1xl text-white">Welcome to Health Connect</p>
                 </div>
