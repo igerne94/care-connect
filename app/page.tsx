@@ -1,11 +1,12 @@
 import Features from "@/components/landing/Features";
 import Footer from "@/components/landing/Footer";
-import { SignOutButton } from "@clerk/nextjs";
+import { SignOutButton, UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { LogOutIcon } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import { console } from "inspector";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Home() {
   const { userId } = await auth();
@@ -17,7 +18,10 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-blue-600">Health Connect</span>
+              <Image alt="logo" width={40} height={40} src={"logo.svg"} />
+              <span className="text-2xl font-bold text-blue-600">
+                <Link href={"/"}>Health Connect</Link>
+              </span>
             </div>
             <nav className="hidden md:flex items-center space-x-4">
               <a href="#features" className="text-gray-600 hover:text-blue-600">Features</a>
@@ -49,14 +53,18 @@ export default async function Home() {
                   Connect with healthcare professionals, manage appointments, and access your medical records - all in one secure platform.
                 </p>
             </div>
-            <div className="flex gap-4">
-              {userId ? <>(Logged in)</> :
+              <div className="flex gap-4">
+              {userId ?
                 <>
-                  <Link href={"/sign-up"}><Button className="md:text-base font-light">Create a new account</Button></Link>
-                  <Link href={"/sign-in"}><Button variant="outline" className="md:text-base underline hover:text-blue-600">Log in to account</Button></Link>
-                </>
-              }
-            </div>
+                  <Link href={"/dashboard"}><Button className="md:text-base font-light">Go to dashboard</Button></Link>
+                <UserButton />
+                </> :
+                  <>
+                    <Link href={"/sign-up"}><Button className="md:text-base font-light">Create a new account</Button></Link>
+                    <Link href={"/sign-in"}><Button variant="outline" className="md:text-base underline hover:text-blue-600">Log in to account</Button></Link>
+                  </>
+                }
+              </div>
           </div>
         </div>
         <Features />
