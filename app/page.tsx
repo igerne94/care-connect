@@ -56,7 +56,11 @@ export default async function Home() {
               <div className="flex gap-4">
               {userId ?
                 <>
-                  <Link href={"/dashboard"}><Button className="md:text-base font-light">Go to dashboard</Button></Link>
+                  <Link href={"/dashboard"}>
+                    <Button className="md:text-base font-light">
+                      Go to dashboard
+                    </Button>
+                  </Link>
                 <UserButton />
                 </> :
                   <>
