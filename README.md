@@ -29,4 +29,4 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
     - Customised session token w custom claims ```bash {"metadata": "{{user.public_metadata}}" ```
     - create users and roles
         -  "admin"
-
+- added sign-in, sign-up pages, log-out button
