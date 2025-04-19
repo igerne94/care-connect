@@ -30,3 +30,4 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
     - create users and roles
         -  "admin"
 - added sign-in, sign-up pages, log-out button
+- Set up Playwright and the first tests passed
