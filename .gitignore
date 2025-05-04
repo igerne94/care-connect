@@ -33,6 +33,12 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Ignore all migration files
+prisma/migrations/**
+
+# But do not ignore this specific file
+!prisma/migrations/migration_lock.toml
+
 # vercel
 .vercel
 
