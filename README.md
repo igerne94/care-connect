@@ -31,3 +31,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
         -  "admin"
 - added sign-in, sign-up pages, log-out button
 - Set up Playwright and the first tests passed
+- Connecting to Postgres
+     - instal Prisma locally (https://www.prisma.io/docs/guides/nextjs)
+     - use Neon Console, integrate prisma
+     - create schema with relationships locally
+     - push schema to the Neon instance
+     - INSTALL prisma-client: https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration
+     - (npx prisma studio)
+- New migrations with new db resources
