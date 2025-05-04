@@ -39,3 +39,6 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
      - INSTALL prisma-client: https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration
      - (npx prisma studio)
 - New migrations with new db resources
+- Implemented role-based access control for Admin, Doctor, Patient
+    - https://clerk.com/docs/references/nextjs/basic-rbac
+    - add role admin for my acc in clerk dashboard
